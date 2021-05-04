@@ -1,0 +1,11 @@
+{
+    "name": "Cube Creator Core Plugin",
+    "display_name": "Core Plugin",
+    "author": "The Cube Creator Author",
+    "version": "1.0",
+    "id": "2f1dd1d7-8c9c-4343-b2d0-d718b4341539",
+    "link": "https://cubecreator.github.io/",
+    "description": "This is the default plugin with the basic editors used to create data packs.",
+    "entry": "Main.groovy",
+    "menu": []
+}

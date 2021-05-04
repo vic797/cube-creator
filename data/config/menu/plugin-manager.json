@@ -1,0 +1,12 @@
+[
+    {
+        "text": "Add plugin",
+        "icon": "cube://icons/icons8-plugin-add-16.png",
+        "action": "PluginEditor.ACTION_ADD_PLUGIN"
+    },
+    {
+        "text": "Remove plugin",
+        "icon": "cube://icons/icons8-plugin-delete-16.png",
+        "action": "PluginEditor.ACTION_DELETE_PLUGIN"
+    }
+]

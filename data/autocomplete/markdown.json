@@ -1,0 +1,74 @@
+{
+    "completions": [
+        {
+            "type": "template",
+            "input": "b",
+            "definition": "bold-text",
+            "summary": "Add bold text: **Bold**",
+            "description": "",
+            "template": "**${text}**${cursor}"
+        },
+        {
+            "type": "template",
+            "input": "i",
+            "definition": "italic-text",
+            "summary": "Add italic text: *Italic*",
+            "description": "",
+            "template": "*${text}*${cursor}"
+        },
+        {
+            "type": "template",
+            "input": "c",
+            "definition": "code",
+            "summary": "Add code text: `Code`",
+            "description": "",
+            "template": "`${text}`${cursor}"
+        },
+        {
+            "type": "template",
+            "input": "ol",
+            "definition": "ordered-list",
+            "summary": "Add a numbered list: \n\n1. Item 1\n2. Item 2\n3. Item 3",
+            "description": "",
+            "template": "1. ${text}"
+        },
+        {
+            "type": "template",
+            "input": "ul",
+            "definition": "unordered-list",
+            "summary": "Add a bulleted list: \n\n- Item 1\n- Item 2\n- Item 3",
+            "description": "",
+            "template": "- ${text}"
+        },
+        {
+            "type": "template",
+            "input": "code",
+            "definition": "code-block",
+            "summary": "Add a code block: \n\n```\n{\n    \"key\": \"Some JSON\"\n}```\n",
+            "description": "",
+            "template": "```${lang}\n${code}\n```${cursor}"
+        },
+        {
+            "type": "template",
+            "input": "s",
+            "definition": "strikethrough",
+            "template": "~~${text}~~${cursor}"
+        },
+        {
+            "type": "template",
+            "input": "a",
+            "definition": "link",
+            "summary": "Add a link to a website: [Example](http://www.example.com/)",
+            "description": "",
+            "template": "[${text}](${link})${cursor}"
+        },
+        {
+            "type": "template",
+            "input": "img",
+            "definition": "image",
+            "summary": "Add an image: \n\n![Example placeholder](https://via.placeholder.com/150.png)\n\n",
+            "description": "",
+            "template": "![${alt}](${link})${cursor}"
+        }
+    ]
+}

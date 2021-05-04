@@ -1,0 +1,25 @@
+[
+    {
+        "tooltip": "Zoom +",
+        "icon": "cube://icons/icons8-zoom-in-16.png",
+        "action": "ImageEditor.ACTION_ZOOM_IN"
+    },
+    {
+        "tooltip": "Zoom -",
+        "icon": "cube://icons/icons8-zoom-out-16.png",
+        "action": "ImageEditor.ACTION_ZOOM_OUT"
+    },
+    {
+        "tooltip": "Zoom 1:1",
+        "action": "ImageEditor.ACTION_ZOOM_RESET",
+        "icon": "cube://icons/icons8-search-16.png"
+    },
+    {
+        "text": "-"
+    },
+    {
+        "tooltip": "Center",
+        "action": "ImageEditor.ACTION_CENTER",
+        "icon": "cube://icons/icons8-target-16.png"
+    }
+]

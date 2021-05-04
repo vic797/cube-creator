@@ -1,0 +1,11 @@
+{
+    "json": "text/json",
+    "js": "text/javascript",
+    "yml": "text/yaml",
+    "yaml": "text/yaml",
+    "mcfunction": "text/mcfunction",
+    "mcmeta": "text/json",
+    "groovy": "text/groovy",
+    "md": "text/markdown",
+    "markdown": "text/markdown"
+}

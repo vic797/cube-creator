@@ -1,0 +1,142 @@
+[
+    {
+        "tooltip": "Save",
+        "icon": "cube://icons/icons8-save-16.png",
+        "action": "AbstractEditor.ACTION_SAVE"
+    },
+    {
+        "text": "-"
+    },
+    {
+        "tooltip": "Undo",
+        "icon": "cube://icons/icons8-undo-16.png",
+        "action": "MarkdownEditor.ACTION_UNDO"
+    },
+    {
+        "tooltip": "Redo",
+        "icon": "cube://icons/icons8-redo-16.png",
+        "action": "MarkdownEditor.ACTION_REDO"
+    },
+    {
+        "text": "-"
+    },
+    {
+        "tooltip": "Copy",
+        "icon": "cube://icons/icons8-copy-16.png",
+        "action": "MarkdownEditor.ACTION_COPY"
+    },
+    {
+        "tooltip": "Cut",
+        "icon": "cube://icons/icons8-cut-16.png",
+        "action": "MarkdownEditor.ACTION_CUT"
+    },
+    {
+        "tooltip": "Paste",
+        "icon": "cube://icons/icons8-paste-16.png",
+        "action": "MarkdownEditor.ACTION_PASTE"
+    },
+    {
+        "tooltip": "Select all",
+        "icon": "cube://icons/icons8-select-all-16.png",
+        "action": "MarkdownEditor.ACTION_SELECT_ALL"
+    },
+    {
+        "text": "-"
+    },
+    {
+        "tooltip": "Find",
+        "action": "MarkdownEditor.ACTION_FIND",
+        "icon": "cube://icons/icons8-search-16.png"
+    },
+    {
+        "tooltip": "Find and replace",
+        "action": "MarkdownEditor.ACTION_REPLACE",
+        "icon": "cube://icons/icons8-find-and-replace-16.png"
+    },
+    {
+        "text": "-"
+    },
+    {
+        "tooltip": "Refresh",
+        "action": "MarkdownEditor.ACTION_REFRESH",
+        "icon": "cube://icons/icons8-refresh-16.png"
+    },
+    {
+        "text": "-"
+    },
+    {
+        "tooltip": "Header",
+        "icon": "cube://icons/icons8-header-16.png",
+        "menu": [
+            {
+                "text": "Header 1",
+                "action": "MarkdownEditor.ACTION_ADD_HEADER"
+            },
+            {
+                "text": "Header 2",
+                "action": "MarkdownEditor.ACTION_ADD_HEADER2"
+            },
+            {
+                "text": "Header 3",
+                "action": "MarkdownEditor.ACTION_ADD_HEADER3"
+            },
+            {
+                "text": "Header 4",
+                "action": "MarkdownEditor.ACTION_ADD_HEADER4"
+            },
+            {
+                "text": "Header 5",
+                "action": "MarkdownEditor.ACTION_ADD_HEADER5"
+            },
+            {
+                "text": "Header 6",
+                "action": "MarkdownEditor.ACTION_ADD_HEADER6"
+            }
+        ]
+    },
+    {
+        "tooltip": "Bold",
+        "action": "MarkdownEditor.ACTION_ADD_BOLD",
+        "icon": "cube://icons/icons8-bold-16.png"
+    },
+    {
+        "tooltip": "Italic",
+        "action": "MarkdownEditor.ACTION_ADD_ITALIC",
+        "icon": "cube://icons/icons8-italic-16.png"
+    },
+    {
+        "tooltip": "Strikethrough",
+        "action": "MarkdownEditor.ACTION_ADD_STRIKETHROUGH",
+        "icon": "cube://icons/icons8-strikethrough-16.png"
+    },
+    {
+        "tooltip": "Code",
+        "action": "MarkdownEditor.ACTION_ADD_CODE",
+        "icon": "cube://icons/icons8-source-code-16.png"
+    },
+    {
+        "tooltip": "Bulleted list",
+        "action": "MarkdownEditor.ACTION_ADD_BULLETED_LIST",
+        "icon": "cube://icons/icons8-bulleted-list-16.png"
+    },
+    {
+        "tooltip": "Numbered list",
+        "action": "MarkdownEditor.ACTION_ADD_NUMBERED_LIST",
+        "icon": "cube://icons/icons8-numbered-list-16.png"
+    },
+    {
+        "tooltip": "Table",
+        "action": "MarkdownEditor.ACTION_ADD_TABLE",
+        "icon": "cube://icons/icons8-table-16.png"
+    },
+    {
+        "tooltip": "Link",
+        "action": "MarkdownEditor.ACTION_ADD_LINK",
+        "icon": "cube://icons/icons8-link-16.png"
+    },
+    {
+        "tooltip": "Image",
+        "action": "MarkdownEditor.ACTION_ADD_IMAGE",
+        "icon": "cube://icons/icons8-add-image-16.png"
+    }
+]

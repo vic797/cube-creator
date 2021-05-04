@@ -1,0 +1,41 @@
+{
+    "completions": [
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@p"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@r"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@a"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@e"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@s"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@c",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@v",
+            "defined_in": "Education Edition"
+        }
+    ]
+}

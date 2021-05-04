@@ -1,0 +1,968 @@
+{
+    "param_start": " ",
+    "param_end": " ",
+    "param_separator": " ",
+    "completions": [
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@p"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@r"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@a"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@e"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@s"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@c",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "constant",
+            "variable_type": "selector",
+            "name": "@v",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "?",
+            "description": "An alias of /help. Provides help for commands.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "ability",
+            "description": "Grants or revokes a player ability.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "target",
+                    "name": "player",
+                    "description": "Specifies the target for which to grant/revoke/query the ability."
+                },
+                {
+                    "type": "Ability",
+                    "name": "ability",
+                    "description": "Specifies the player ability."
+                },
+                {
+                    "type": "Boolean",
+                    "name": "value",
+                    "description": "Specifies the value to set the ability to, must be either `true` or `false`."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "advancement",
+            "description": "Gives, removes, or checks player advancements.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "agent",
+            "description": "Controls the agent.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "allowlist",
+            "description": "Manages the server's allowlist.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "alwaysday",
+            "description": "An alias of /daylock. Locks and unlocks the day-night cycle.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "attribute",
+            "description": "Queries, adds, removes or sets an entity attribute.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "ban",
+            "description": "Adds player to banlist.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "ban-ip",
+            "description": "Adds IP address to banlist.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "banlist",
+            "description": "Displays banlist.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "bossbar",
+            "description": "Creates and modifies bossbars.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "camerashake",
+            "description": "Used to enable a camera shaking effect.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "changesetting",
+            "description": "Changes a setting on the dedicated server while it's running.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "classroommode",
+            "description": "Ability to edit restricted blocks.",
+            "defined_in": "Education Edition",
+            "params": [
+                {
+                    "type": "target",
+                    "name": "player",
+                    "description": "Specifies the player whose spawn point should be removed. If not specified, defaults to the command's executor (`@s`)."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "clear",
+            "description": "Clears items from player inventory.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "clearspawnpoint",
+            "description": "Remove spawnpoints in the world.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "clone",
+            "description": "Copies blocks from one place to another.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "closechat",
+            "description": "Closes the chat window of the local player if it is open.",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "closewebsocket",
+            "description": "Closes websocket connection if there is one.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "code",
+            "description": "Launches Code Builder.",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "codebuilder",
+            "description": "Sets Code Builder state for a player.",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "connect",
+            "description": "An alias of /wsserver. Attempts to connect to the websocket server.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "data",
+            "description": "Gets, merges, modifies and removes block entity and entity NBT data.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "datapack",
+            "description": "Controls loaded data packs.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "daylock",
+            "description": "An alias of /alwaysday. Locks and unlocks the day-night cycle.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "Boolean",
+                    "name": "lock",
+                    "description": "Specifies whether the eternal daytime is locked or not."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "debug",
+            "description": "Starts or stops a debugging session.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "dedicatedwsserver",
+            "description": "Attempts to connect to the websocket server.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "defaultgamemode",
+            "description": "Sets the default game mode.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "deop",
+            "description": "Revokes operator status from a player.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "dialogue",
+            "description": "Opens NPC dialogue for a player.",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "difficulty",
+            "description": "Sets the difficulty level.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "effect",
+            "description": "Add or remove status effects.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "enableencryption",
+            "description": "Enable encryption for the current websocket connection.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "enchant",
+            "description": "Adds an enchantment to a player's selected item.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "event",
+            "description": "Used to trigger an event on an entity.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "execute",
+            "description": "Executes another command.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "experience",
+            "description": "An alias of /xp. Adds or removes player experience.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "fill",
+            "description": "Fills a region with a specific block.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "fog",
+            "description": "Used for managing active fog settings for players.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "forceload",
+            "description": "Forces chunks to constantly be loaded or not.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "function",
+            "description": "Runs a function.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "gamemode",
+            "description": "Sets a player's game mode.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "gamerule",
+            "description": "Sets or queries a game rule value.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "gametest",
+            "description": "To test the GameTest features.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "getchunkdata",
+            "description": "Gets pixels for a specific chunk.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "string",
+                    "name": "dimension",
+                    "description": "The dimension name."
+                },
+                {
+                    "type": "int",
+                    "name": "chunkX",
+                    "description": "Specifies the coordinates of the chunk in X-axis."
+                },
+                {
+                    "type": "int",
+                    "name": "chunkZ",
+                    "description": "Specifies the coordinates of the chunk in Z-axis."
+                },
+                {
+                    "type": "int",
+                    "name": "height",
+                    "description": "Specifies the height of the chunk."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "getchunks",
+            "description": "Gets list of chunks that are loaded.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "string",
+                    "name": "dimension",
+                    "description": "The dimension name."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "geteduclientinfo",
+            "description": "Shows the information about the client.",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "geteduserverinfo",
+            "description": "Shows the information about the server.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "getlocalplayername",
+            "description": "Shows the name of the local player.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "getspawnpoint",
+            "description": "Gets the spawn position of the specified player(s).",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "target",
+                    "name": "player",
+                    "description": "Specifies the target to get the player spawn point. Must be a player name or target selector."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "gettopsolidblock",
+            "description": "Gets the position of the top non-air block below the specified position.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "give",
+            "description": "Gives an item to a player.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "globalpause",
+            "description": "Sets or gets the paused state of the game for all players.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "bool",
+                    "name": "isPaused",
+                    "description": "Specifies the value to pause the world, must in between `true` or `false`."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "help",
+            "description": "An alias of /?. Provides help for commands.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "immutableworld",
+            "description": "Allows setting immutable state of a world.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "bool",
+                    "name": "value",
+                    "description": "Specifies the value to set the world to be able altered, must in between `true` or `false`."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "kick",
+            "description": "Kicks a player off a server.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "kill",
+            "description": "Kills entities (players, mobs, items, etc.).",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "lesson",
+            "description": "Handle Educational Lesson reporting.",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "list",
+            "description": "Lists players on the server.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "listd",
+            "description": "Lists the information about players on the server.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "locate",
+            "description": "Locates closest structure.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "locatebiome",
+            "description": "Locates closest biome.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "loot",
+            "description": "Drops items from an inventory slot onto the ground.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "me",
+            "description": "Displays a message about the sender.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "mobevent",
+            "description": "Enables/disables a specified mob event.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "MobEvent",
+                    "name": "event",
+                    "description": "Specifies the event(s) to control or query."
+                },
+                {
+                    "type": "Boolean",
+                    "name": "value",
+                    "description": "If specified, `true` enables the events and `false` disables them. If omitted, the current enabled status is displayed."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "msg",
+            "description": "An alias of /tell and /w. Displays a private message to other players.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "music",
+            "description": "Allows the player to control playing music tracks.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "op",
+            "description": "Grants operator status to a player.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "ops",
+            "description": "An alias of /permission. Reloads and applies permissions.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "pardon",
+            "description": "Removes entries from the banlist.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "pardon-ip",
+            "description": "Removes entries from the banlist.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "particle",
+            "description": "Creates particles.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "permission",
+            "description": "An alias of /ops. Reloads and applies permissions.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "playanimation",
+            "description": "Used to run a one-off animation.",
+            "defined_in": "Bedrock Edition",
+            "params": [
+                {
+                    "type": "target",
+                    "name": "entity",
+                    "description": "Specifies the targeted entities."
+                },
+                {
+                    "type": "string",
+                    "name": "animation",
+                    "description": "Specifies an animation to play now."
+                },
+                {
+                    "type": "string",
+                    "name": "next_state",
+                    "description": "Specifies the animation after the first animation stops playing."
+                },
+                {
+                    "type": "float",
+                    "name": "blend_out_time",
+                    "description": "Specifies the duration of the gradient animation."
+                },
+                {
+                    "type": "string",
+                    "name": "stop_expression",
+                    "description": "Specifies the conditions for stopping animation."
+                },
+                {
+                    "type": "string",
+                    "name": "controller",
+                    "description": "Specifies an animation controller."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "playsound",
+            "description": "Plays a sound.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "publish",
+            "description": "Opens single-player world to local network.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "querytarget",
+            "description": "Gets transform, name, and id information about the given target entity or entities.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "target",
+                    "name": "victim",
+                    "description": "Specifies the targets."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "recipe",
+            "description": "Gives or takes player recipes.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "reload",
+            "description": "Reloads loot tables, advancements, and functions from disk.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "remove",
+            "description": "Removing agent.",
+            "defined_in": ""
+        },
+        {
+            "type": "function",
+            "name": "replaceitem",
+            "description": "Replaces items in inventories.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "ride",
+            "description": "Used to make entities ride other entities, stop entities from riding, make rides evict their riders, or summon rides or riders.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "save",
+            "description": "Prepares a backup, queries its status, or resumes.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "save-all",
+            "description": "Saves the server to disk.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "save-off",
+            "description": "Disables automatic server saves.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "save-on",
+            "description": "Enables automatic server saves.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "say",
+            "description": "Displays a message to multiple players.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "schedule",
+            "description": "Delays the execution of a function.",
+            "defined_in": "Bedrock Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "scoreboard",
+            "description": "Manages scoreboard objectives and players.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "seed",
+            "description": "Displays the world seed.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "setblock",
+            "description": "Changes a block to another block.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "setidletimeout",
+            "description": "Sets the time before idle players are kicked.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "setmaxplayers",
+            "description": "Sets the maximum number of players allowed to join.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "setworldspawn",
+            "description": "Sets the world spawn.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "spawnitem",
+            "description": "Spawns an item entity at position.",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "spawnpoint",
+            "description": "Sets the spawn point for a player.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "spectate",
+            "description": "Make one player in spectator mode spectate an entity.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "spreadplayers",
+            "description": "Teleports entities to random locations.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "stop",
+            "description": "Stops a server.",
+            "defined_in": "Bedrock Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "stopsound",
+            "description": "Stops a sound.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "structure",
+            "description": "Used to save and load structures without having to use structure blocks items in inventories.",
+            "defined_in": "Bedrock Edition"
+        },
+        {
+            "type": "function",
+            "name": "summon",
+            "description": "Summons an entity.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "tag",
+            "description": "Controls entity tags.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "takepicture",
+            "description": "Takes a photo of a player or from a player's point of view.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "team",
+            "description": "Controls teams.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "teammsg",
+            "description": "An alias of /tm. Specifies the message to send to team.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "teleport",
+            "description": "An alias of /tp. Teleports entities.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "tell",
+            "description": "An alias of /msg and /w. Displays a private message to other players.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "tellraw",
+            "description": "Displays a JSON message to players.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "testfor",
+            "description": "Counts entities matching specified conditions.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "target",
+                    "name": "victim",
+                    "description": "Specifies the entities to test."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "testforblock",
+            "description": "Tests whether a block is in a location.",
+            "defined_in": "Bedrock Edition, Education Edition",
+            "params": [
+                {
+                    "type": "x y z",
+                    "name": "position",
+                    "description": "Specifies the coordinates of the block to test."
+                },
+                {
+                    "type": "Block",
+                    "name": "tileName",
+                    "description": "Specifies the block to test for."
+                },
+                {
+                    "type": "int",
+                    "name": "dataValue",
+                    "description": "Specifies the block data to match when testfor. Values (bitwise AND 0xFFFF) that are invalid for the specified block id revert to 0. If it is negative, all blocks that match `tileName: Block` are tested."
+                }
+            ]
+        },
+        {
+            "type": "function",
+            "name": "testforblocks",
+            "description": "Tests whether the blocks in two regions match.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "tickingarea",
+            "description": "Add, remove, or list ticking areas.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "time",
+            "description": "Changes or queries the world's game time.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "title",
+            "description": "Manages screen titles.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "tm",
+            "description": "An alias of /teammsg. Specifies the message to send to team.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "toggledownfall",
+            "description": "Toggles the weather.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "tp",
+            "description": "An alias of /teleport. Teleports entities.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "trigger",
+            "description": "Sets a trigger to be activated.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "videostream",
+            "description": "Attempts to connect to the websocket server to send a video stream.",
+            "defined_in": "Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "w",
+            "description": "An alias of /tell and /msg. Displays a private message to other players.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "wb",
+            "description": "An alias of /worldbuilder. Ability to edit restricted blocks.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "weather",
+            "description": "Sets the weather.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "whitelist",
+            "description": "Manages server whitelist.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "worldborder",
+            "description": "Manages the world border.",
+            "defined_in": "Java Edition"
+        },
+        {
+            "type": "function",
+            "name": "worldbuilder",
+            "description": "An alias of /wb. Ability to edit restricted blocks.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "wsserver",
+            "description": "An alias of /connect. Attempts to connect to the websocket server.",
+            "defined_in": "Bedrock Edition, Education Edition"
+        },
+        {
+            "type": "function",
+            "name": "xp",
+            "description": "An alias of /experience. Adds or removes player experience.",
+            "defined_in": "Bedrock Edition, Education Edition, Java Edition"
+        }
+    ]
+}

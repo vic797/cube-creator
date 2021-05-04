@@ -1,0 +1,49 @@
+[
+    {
+        "text": "JSON",
+        "extensions": [
+            "json",
+            "mcmeta"
+        ]
+    },
+    {
+        "text": "YAML",
+        "extensions": [
+            "yaml",
+            "yml"
+        ]
+    },
+    {
+        "text": "JavaScript",
+        "extensions": [
+            "js"
+        ]
+    },
+    {
+        "text": "Minecraft Function",
+        "extensions": [
+            "mcfunction"
+        ]
+    },
+    {
+        "text": "Groovy",
+        "extensions": [
+            "groovy"
+        ]
+    },
+    {
+        "text": "Markdown",
+        "extensions": [
+            "md",
+            "markdown"
+        ]
+    },
+    {
+        "text": "Images",
+        "extensions": [
+            "png",
+            "jpg",
+            "gif"
+        ]
+    }
+]

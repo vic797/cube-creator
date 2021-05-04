@@ -1,0 +1,32 @@
+[
+    {
+        "text": "New file",
+        "action": "FileExplorer.ACTION_NEW_FILE"
+    },
+    {
+        "text": "New directory",
+        "action": "FileExplorer.ACTION_NEW_DIRECTORY"
+    },
+    {
+        "text": "-"
+    },
+    {
+        "text": "Rename",
+        "action": "FileExplorer.ACTION_RENAME"
+    },
+    {
+        "text": "Delete",
+        "action": "FileExplorer.ACTION_DELETE",
+        "accelerator": "DELETE"
+    },
+    {
+        "text": "Copy",
+        "action": "FileExplorer.ACTION_COPY",
+        "accelerator": "ctrl alt C"
+    },
+    {
+        "text": "Move",
+        "action": "FileExplorer.ACTION_MOVE",
+        "accelerator": "ctrl alt X"
+    }
+]

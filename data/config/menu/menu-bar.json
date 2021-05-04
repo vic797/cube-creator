@@ -1,0 +1,145 @@
+[
+    {
+        "text": "File",
+        "menu": [
+            {
+                "text": "New file",
+                "accelerator": "ctrl N",
+                "action": "Workbench.ACTION_NEW_FILE"
+            },
+            {
+                "text": "New pack",
+                "accelerator": "ctrl shift N",
+                "action": "Workbench.ACTION_NEW_PACK"
+            },
+            {
+                "text": "Open file",
+                "accelerator": "ctrl O",
+                "action": "Workbench.ACTION_OPEN_FILE"
+            },
+            {
+                "text": "Open pack",
+                "accelerator": "ctrl shift O",
+                "action": "Workbench.ACTION_OPEN_PACK"
+            },
+            {
+                "text": "-"
+            },
+            {
+                "text": "Save",
+                "accelerator": "ctrl S",
+                "action": "AbstractEditor.ACTION_SAVE"
+            },
+            {
+                "text": "Save all",
+                "accelerator": "ctrl shift S",
+                "action": "Workbench.ACTION_SAVE_ALL"
+            },
+            {
+                "text": "Save as",
+                "action": "Workbench.ACTION_SAVE_AS"
+            },
+            {
+                "text": "-"
+            },
+            {
+                "text": "Close file",
+                "accelerator": "ctrl K",
+                "action": "Workbench.ACTION_CLOSE_FILE"
+            },
+            {
+                "text": "Close all files",
+                "accelerator": "ctrl shift K"
+            },
+            {
+                "text": "Close pack",
+                "action": "Workbench.ACTION_CLOSE_PACK"
+            },
+            {
+                "text": "-"
+            },
+            {
+                "text": "Exit",
+                "action": "Workbench.ACTION_EXIT"
+            }
+        ]
+    },
+    {
+        "text": "Edit",
+        "menu": [
+            {
+                "text": "Undo",
+                "action": "CodeEditor.ACTION_UNDO",
+                "accelerator": "ctrl Z"
+            },
+            {
+                "text": "Redo",
+                "action": "CodeEditor.ACTION_REDO",
+                "accelerator": "ctrl Y"
+            },
+            {
+                "text": "-"
+            },
+            {
+                "text": "Copy",
+                "action": "CodeEditor.ACTION_COPY",
+                "accelerator": "ctrl C"
+            },
+            {
+                "text": "Cut",
+                "action": "CodeEditor.ACTION_CUT",
+                "accelerator": "ctrl X"
+            },
+            {
+                "text": "Paste",
+                "action": "CodeEditor.ACTION_PASTE",
+                "accelerator": "ctrl V"
+            },
+            {
+                "text": "-"
+            },
+            {
+                "text": "Find",
+                "action": "CodeEditor.ACTION_FIND",
+                "accelerator": "ctrl F"
+            },
+            {
+                "text": "Find and replace",
+                "action": "CodeEditor.ACTION_REPLACE",
+                "accelerator": "ctrl R"
+            },
+            {
+                "text": "Select all",
+                "action": "CodeEditor.ACTION_SELECT_ALL",
+                "accelerator": "ctrl A"
+            }
+        ]
+    },
+    {
+        "text": "Plugins",
+        "menu": [
+            {
+                "text": "Manage plugins",
+                "accelerator": "F10",
+                "action": "Workbench.ACTION_MANAGE_PLUGINS"
+            }
+        ],
+        "enable_preprocessor": true,
+        "name": "plugin_menu_item"
+    },
+    {
+        "text": "Help",
+        "menu": [
+            {
+                "text": "Help",
+                "accelerator": "F12",
+                "action": "Workbench.ACTION_OPEN_HELP"
+            },
+            {
+                "text": "About",
+                "accelerator": "F11",
+                "action": "Workbench.ACTION_OPEN_ABOUT"
+            }
+        ]
+    }
+]

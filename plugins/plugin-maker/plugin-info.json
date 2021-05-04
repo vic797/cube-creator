@@ -1,0 +1,26 @@
+{
+    "name": "Cube Creator Plugin Maker",
+    "display_name": "Plugin Maker",
+    "author": "The Cube Creator Author",
+    "version": "1.0",
+    "id": "88f40032-2849-4bd7-b4a8-84a36f58f6d3",
+    "link": "https://cubecreator.github.io/",
+    "description": "This is the Plugin Maker plugin",
+    "entry": "Main.groovy",
+    "menu": [
+        {
+            "text": "Create plugin",
+            "action": "createPlugin",
+            "accelerator": "ctrl shift P"
+        },
+        {
+            "text": "Edit plugin",
+            "action": "editPlugin",
+            "accelerator": "ctrl alt P"
+        },
+        {
+            "text": "Pack plugin",
+            "action": "packPlugin"
+        }
+    ]
+}
