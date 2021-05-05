@@ -1,5 +1,6 @@
 plugins {
     id 'groovy'
+    id "com.github.johnrengelman.shadow" version "6.1.0"
 }
 
 group 'io.github.cubecreator'
@@ -46,12 +47,28 @@ test {
     useJUnitPlatform()
 }
 
+task buildFatJar(dependsOn: [shadowJar]) {
+    mkdir "$buildDir/fat"
+    copy {
+        from "$buildDir/libs/$rootProject.name-$version-all.jar"
+        into "$buildDir/fat"
+    }
+    delete "$buildDir/libs/$rootProject.name-$version-all.jar"
+    copy {
+        from(projectDir) {
+            include 'data/**'
+            exclude 'data/autocomplete/generator.py', 'data/autocomplete/mcfunction.txt', 'data/autocomplete/mcfunction_joint.json', 'data/autocomplete/mcfunction_new.json'
+        }
+        into "$buildDir/fat"
+    }
+}
+
 task copyDependencies(type: Copy, dependsOn: [jar]) {
     from configurations.runtimeClasspath
     into "$buildDir/libs"
 }
 
-task cleanupJar(type: Delete) {
+task cleanupJar(type: Delete, dependsOn: [clean]) {
     delete "$projectDir/dist/linux_x64/data"
     delete "$projectDir/dist/linux_x64/libs"
     delete "$projectDir/dist/linux_x64/plugins"
@@ -67,28 +84,31 @@ task cleanupJar(type: Delete) {
 }
 
 task buildJar(dependsOn: [copyDependencies]) {
-    print("Copying files")
     copy {
         from(buildDir) {
             include 'libs/**'
+            exclude "libs/$rootProject.name-$version-all.jar"
         }
         into "$projectDir/dist/linux_x64"
     }
     copy {
         from(buildDir) {
             include 'libs/**'
+            exclude "libs/$rootProject.name-$version-all.jar"
         }
         into "$projectDir/dist/mac_x64"
     }
     copy {
         from(buildDir) {
             include 'libs/**'
+            exclude "libs/$rootProject.name-$version-all.jar"
         }
         into "$projectDir/dist/windows_x86"
     }
     copy {
         from(buildDir) {
             include 'libs/**'
+            exclude "libs/$rootProject.name-$version-all.jar"
         }
         into "$projectDir/dist/windows_x64"
     }
