@@ -1,6 +1,6 @@
 # Cube Creator
 
-**Cube Creator** is an IDE ment for data packs and resource packs for Minecraft Java Edition. Cube Creator has many features that you expect from any other IDE like:
+**Cube Creator** is an IDE meant for data packs and resource packs for Minecraft Java Edition. Cube Creator has many features that you expect from any other IDE like:
 
 - Syntax highlight for Functions, JSON, JavaScript, Markdown and YAML.
 - Plugin support using [scripted](https://en.wikipedia.org/wiki/Scripting_language) [Groovy](https://groovy-lang.org/) (no compilation needed).
@@ -15,7 +15,7 @@ Check the [releases](https://github.com/vic797/cube-creator/releases) page to se
 
 # Contribute
 
-Cube Creator is in **Alpha** stage so many bugs are expected. If you encounter one make sure to open an issue. Also Cube Cretor needs an icon; if you create create one and share it that would be apreciated.
+Cube Creator is in **Alpha** stage so many bugs are expected. If you encounter one make sure to open an issue. Also Cube Cretor needs an icon; if you create create one and share it that would be appreciated.
 
 # Development
 
