@@ -3,7 +3,7 @@ plugins {
 }
 
 group 'io.github.cubecreator'
-version '1.0-SNAPSHOT'
+version '0.1'
 
 repositories {
     mavenCentral()
@@ -35,6 +35,20 @@ dependencies {
     implementation 'net.lingala.zip4j:zip4j:2.7.0'
 }
 
+jar {
+    archiveFileName = 'cube-creator.jar'
+    manifest {
+        attributes 'Main-Class': 'io.github.cubecreator.Launcher'
+    }
+}
+
 test {
     useJUnitPlatform()
 }
+
+task copyDependencies(type: Copy, dependsOn: [jar]) {
+    from configurations.runtimeClasspath
+    into "$buildDir/libs"
+}
+
+task buildJar(dependsOn: [copyDependencies]) {}

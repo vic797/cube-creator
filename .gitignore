@@ -3,5 +3,5 @@
 /logs
 /config.properties
 /data/autocomplete/mcfunction.txt
-/data/autocomplete/mcfunction_joint.txt
-/data/autocomplete/mcfunction_new.txt
+/data/autocomplete/mcfunction_joint.json
+/data/autocomplete/mcfunction_new.json
