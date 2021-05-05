@@ -2,6 +2,7 @@ package io.github.cubecreator.util
 
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import org.apache.commons.io.FileUtils
 
 /**
  * A wrapper around the Properties class that supports primitive types and arrays
@@ -10,8 +11,16 @@ class Settings {
 
     static Settings get(String name) {
         Settings settings = new Settings()
-        settings.loadSettings(new File(".", name))
-        settings.file = new File(".", name)
+        File f = new File(".", name)
+        if (!f.exists()) {
+            try {
+                FileUtils.touch(f)
+            } catch (e) {}
+        }
+        try {
+            settings.loadSettings(f)
+        } catch (e) {}
+        settings.file = f
         return settings
     }
 

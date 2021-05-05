@@ -51,4 +51,102 @@ task copyDependencies(type: Copy, dependsOn: [jar]) {
     into "$buildDir/libs"
 }
 
-task buildJar(dependsOn: [copyDependencies]) {}
+task cleanupJar(type: Delete) {
+    delete "$projectDir/dist/linux_x64/data"
+    delete "$projectDir/dist/linux_x64/libs"
+    delete "$projectDir/dist/linux_x64/plugins"
+    delete "$projectDir/dist/mac_x64/data"
+    delete "$projectDir/dist/mac_x64/libs"
+    delete "$projectDir/dist/mac_x64/plugins"
+    delete "$projectDir/dist/windows_x86/data"
+    delete "$projectDir/dist/windows_x86/libs"
+    delete "$projectDir/dist/windows_x86/plugins"
+    delete "$projectDir/dist/windows_x64/data"
+    delete "$projectDir/dist/windows_x64/libs"
+    delete "$projectDir/dist/windows_x64/plugins"
+}
+
+task buildJar(dependsOn: [copyDependencies]) {
+    print("Copying files")
+    copy {
+        from(buildDir) {
+            include 'libs/**'
+        }
+        into "$projectDir/dist/linux_x64"
+    }
+    copy {
+        from(buildDir) {
+            include 'libs/**'
+        }
+        into "$projectDir/dist/mac_x64"
+    }
+    copy {
+        from(buildDir) {
+            include 'libs/**'
+        }
+        into "$projectDir/dist/windows_x86"
+    }
+    copy {
+        from(buildDir) {
+            include 'libs/**'
+        }
+        into "$projectDir/dist/windows_x64"
+    }
+    copy {
+        from(projectDir) {
+            include 'data/**'
+            exclude 'data/autocomplete/generator.py', 'data/autocomplete/mcfunction.txt', 'data/autocomplete/mcfunction_joint.json', 'data/autocomplete/mcfunction_new.json'
+        }
+        into "$projectDir/dist/linux_x64"
+    }
+    copy {
+        from(projectDir) {
+            include 'data/**'
+            exclude 'data/autocomplete/generator.py', 'data/autocomplete/mcfunction.txt', 'data/autocomplete/mcfunction_joint.json', 'data/autocomplete/mcfunction_new.json'
+        }
+        into "$projectDir/dist/mac_x64"
+    }
+    copy {
+        from(projectDir) {
+            include 'data/**'
+            exclude 'data/autocomplete/generator.py', 'data/autocomplete/mcfunction.txt', 'data/autocomplete/mcfunction_joint.json', 'data/autocomplete/mcfunction_new.json'
+        }
+        into "$projectDir/dist/windows_x86"
+    }
+    copy {
+        from(projectDir) {
+            include 'data/**'
+            exclude 'data/autocomplete/generator.py', 'data/autocomplete/mcfunction.txt', 'data/autocomplete/mcfunction_joint.json', 'data/autocomplete/mcfunction_new.json'
+        }
+        into "$projectDir/dist/windows_x64"
+    }
+    mkdir "$projectDir/dist/linux_x64/plugins"
+    mkdir "$projectDir/dist/mac_x64/plugins"
+    mkdir "$projectDir/dist/windows_x86/plugins"
+    mkdir "$projectDir/dist/windows_x64/plugins"
+    copy {
+        from("$projectDir/plugins") {
+            include 'cube/**'
+        }
+        into "$projectDir/dist/linux_x64/plugins"
+    }
+    copy {
+        from("$projectDir/plugins") {
+            include 'cube/**'
+        }
+        into "$projectDir/dist/mac_x64/plugins"
+    }
+    copy {
+        from("$projectDir/plugins") {
+            include 'cube/**'
+        }
+        into "$projectDir/dist/windows_x86/plugins"
+    }
+    copy {
+        from("$projectDir/plugins") {
+            include 'cube/**'
+        }
+        into "$projectDir/dist/windows_x64/plugins"
+    }
+    mkdir "$projectDir/dist/dist"
+}

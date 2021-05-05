@@ -1,6 +1,7 @@
 /build
 /out
 /logs
+/dist
 /config.properties
 /data/autocomplete/mcfunction.txt
 /data/autocomplete/mcfunction_joint.json
