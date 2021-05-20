@@ -64,6 +64,10 @@ class Settings {
         saveSettings(file)
     }
 
+    void remove(String key) {
+        properties.remove(key)
+    }
+
     boolean has(String key) {
         return properties.hasProperty(key)
     }

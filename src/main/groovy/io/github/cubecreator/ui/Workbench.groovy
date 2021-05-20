@@ -172,6 +172,13 @@ final class Workbench extends JFrame implements ActionListener {
             void windowOpened(WindowEvent windowEvent) {
                 LogManager.getLogger(getClass()).info("Registering to Event Bus")
                 EventBus.getDefault().register(Workbench.this)
+                if (settings.has("opened-pack")) {
+                    LogManager.getLogger(getClass()).info("Restoring session")
+                    String packPath = settings.get("opened-pack")
+                    File pack = new File(packPath)
+                    explorer.setRoot(pack)
+                    PluginManager.getInstance().onPackOpened(pack)
+                }
             }
 
             @Override
@@ -184,6 +191,11 @@ final class Workbench extends JFrame implements ActionListener {
                     settings.put("y", location.y as int)
                 }
                 settings.put("divider-location", splitPane.dividerLocation)
+                if (explorer.root != null) {
+                    settings.put("opened-pack", explorer.root.toString())
+                } else {
+                    settings.remove("opened-pack")
+                }
                 LogManager.getLogger(getClass()).info("Saving settings")
                 settings.saveSettings()
                 new Thread(() -> {

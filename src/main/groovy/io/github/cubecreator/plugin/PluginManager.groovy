@@ -2,6 +2,7 @@
 package io.github.cubecreator.plugin
 
 import com.google.gson.Gson
+import io.github.cubecreator.ui.editor.AbstractEditor
 import io.github.cubecreator.util.FileComparator
 import io.github.cubecreator.util.Utils
 import org.apache.commons.io.FileUtils
@@ -135,6 +136,17 @@ final class PluginManager {
         for (PluginInfo info : plugins.values()) {
             info.plugin.onPackClosed(new PluginEvent<File>(file))
         }
+    }
+
+    List<PluginObject<Class<? extends AbstractEditor>>> getEditors(String path) {
+        List<PluginObject<Class<? extends AbstractEditor>>> out = new ArrayList<>()
+        for (PluginInfo info : plugins.values()) {
+            def item = info.context.getEditor(path)
+            if (item != null) {
+                out.add(item)
+            }
+        }
+        return out
     }
 
 }

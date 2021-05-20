@@ -26,6 +26,8 @@ import javax.swing.ImageIcon
  */
 final class PluginInfo {
 
+    boolean debug
+
     /**
      * The name of this plugin
      */

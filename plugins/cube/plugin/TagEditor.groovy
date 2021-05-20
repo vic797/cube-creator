@@ -38,7 +38,9 @@ class TagEditor extends PluginEditor {
         JsonArray vals = new JsonArray()
         String[] lines = values.text.split(System.lineSeparator())
         for (int i = 0; i < lines.length; i++) {
-            vals.add(lines[i])
+            if (lines[0].length() != 0) {
+                vals.add(lines[i])
+            }
         }
         tag.add("values", vals)
         Gson gson = new GsonBuilder().setPrettyPrinting().create()
@@ -47,18 +49,23 @@ class TagEditor extends PluginEditor {
 
     @Override
     protected void setData(byte[] data) {
-        String json = new String(data, StandardCharsets.UTF_8)
-        JsonObject tag = JsonParser.parseString(json).getAsJsonObject()
-        if (tag.has("replace")) {
-            replace.selected = tag.get("replace").getAsBoolean()
-        }
-        if (tag.has("values")) {
-            JsonArray vals = tag.get("values").getAsJsonArray()
-            String[] valueArray = new String[vals.size()]
-            for (int i = 0; i < vals.size(); i++) {
-                valueArray[i] = vals.get(i).getAsString()
+        if (data.length == 0) return
+        try {
+            String json = new String(data, StandardCharsets.UTF_8)
+            JsonObject tag = JsonParser.parseString(json).getAsJsonObject()
+            if (tag.has("replace")) {
+                replace.selected = tag.get("replace").getAsBoolean()
             }
-            values.text = String.join(System.lineSeparator(), valueArray)
+            if (tag.has("values")) {
+                JsonArray vals = tag.get("values").getAsJsonArray()
+                String[] valueArray = new String[vals.size()]
+                for (int i = 0; i < vals.size(); i++) {
+                    valueArray[i] = vals.get(i).getAsString()
+                }
+                values.text = String.join(System.lineSeparator(), valueArray)
+            }
+        } catch (e) {
+            handle(e)
         }
     }
 

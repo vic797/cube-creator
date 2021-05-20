@@ -2,8 +2,10 @@ package io.github.cubecreator.ui.editor
 
 import io.github.cubecreator.components.ImageView
 import io.github.cubecreator.ui.menu.MenuBuilder
+import io.github.cubecreator.util.EventTransport
 import io.github.cubecreator.util.Utils
 import org.apache.logging.log4j.LogManager
+import org.greenrobot.eventbus.EventBus
 
 import javax.imageio.ImageIO
 import javax.swing.JToolBar
@@ -20,6 +22,7 @@ class ImageEditor extends AbstractEditor {
     static final ACTION_ZOOM_OUT = "ImageEditor.ACTION_ZOOM_OUT"
     static final ACTION_ZOOM_RESET = "ImageEditor.ACTION_ZOOM_RESET"
     static final ACTION_CENTER = "ImageEditor.ACTION_CENTER"
+    static final ACTION_EDIT_MCMETA = "ImageEditor.ACTION_EDIT_MCMETA"
 
     private ImageView imageView
 
@@ -74,6 +77,13 @@ class ImageEditor extends AbstractEditor {
             }
             case ACTION_CENTER: {
                 imageView.setOffset(0, 0)
+                break
+            }
+            case ACTION_EDIT_MCMETA: {
+                File meta = new File(file.toString() + ".mcmeta")
+                if (meta.exists()) {
+                    EventBus.getDefault().post(new EventTransport(EventTransport.EVENT_OPEN_FILE, meta))
+                }
                 break
             }
             default: {

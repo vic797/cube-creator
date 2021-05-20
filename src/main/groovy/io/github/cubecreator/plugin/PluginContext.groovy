@@ -1,6 +1,7 @@
 //file:noinspection GrMethodMayBeStatic
 package io.github.cubecreator.plugin
 
+import io.github.cubecreator.ui.editor.CodeEditor
 import io.github.cubecreator.ui.editor.EditorManager
 import io.github.cubecreator.ui.menu.MenuBuilder
 import io.github.cubecreator.util.EventTransport
@@ -13,6 +14,9 @@ import javax.swing.JToolBar
 import java.awt.Desktop
 import java.awt.event.ActionEvent
 import java.awt.event.ActionListener
+import java.nio.file.FileSystems
+import java.nio.file.Path
+import java.nio.file.PathMatcher
 
 /**
  * This class provides utility functions and access to settings and the information about plugins. Every plugin gets a single context.
@@ -25,6 +29,7 @@ import java.awt.event.ActionListener
 final class PluginContext implements ActionListener {
 
     private final LinkedHashMap<String, PluginAction> actionMap
+    private final HashMap<String, Class<? extends PluginEditor>> editors
     /**
      * Holds information about this plugin
      */
@@ -42,6 +47,7 @@ final class PluginContext implements ActionListener {
         this.info = info
         this.settings = info == null ? null : new PluginSettings(info.context)
         actionMap = new LinkedHashMap<>()
+        editors = new HashMap<>()
     }
 
     /**
@@ -118,7 +124,22 @@ final class PluginContext implements ActionListener {
      * @param editor The editor to use to edit a file
      */
     void registerEditor(String matcher, Class<? extends PluginEditor> editor) {
-        EditorManager.registerEditor(matcher, editor)
+        editors.put(matcher, editor)
+    }
+
+    PluginObject<Class<? extends PluginEditor>> getEditor(String path) {
+        for (String regex : editors.keySet()) {
+            PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:${regex}")
+            Path filePath = new File(path).toPath()
+            if (matcher.matches(filePath)) {
+                try {
+                    return new PluginObject<Class<? extends PluginEditor>>(editors.get(regex), info.id)
+                } catch (e) {
+                    LogManager.getLogger(EditorManager.getClass()).trace(Utils.dump(e))
+                }
+            }
+        }
+        return null
     }
 
     /**

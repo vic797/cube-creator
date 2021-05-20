@@ -1,5 +1,10 @@
 package io.github.cubecreator.ui.editor
 
+
+import io.github.cubecreator.plugin.PluginManager
+import io.github.cubecreator.ui.dialog.BaseDialog
+import io.github.cubecreator.ui.dialog.EditorChooserDialog
+import io.github.cubecreator.util.AbstractObjectDescriptor
 import io.github.cubecreator.util.Utils
 import org.apache.logging.log4j.LogManager
 
@@ -18,6 +23,7 @@ final class EditorManager {
         editorMap.put("**/*.gif", ImageEditor.class)
         editorMap.put("**/*.md", MarkdownEditor.class)
         editorMap.put("**/*.markdown", MarkdownEditor.class)
+        editorMap.put("**/tags/**/*.json", CodeEditor.class)
     }
 
     static void registerEditor(String matcher, Class<? extends AbstractEditor> editor) {
@@ -28,6 +34,8 @@ final class EditorManager {
     }
 
     static AbstractEditor getEditor(String path) {
+        List<AbstractObjectDescriptor<Class<? extends AbstractEditor>>> editors = new ArrayList<>()
+        editors.addAll(PluginManager.getInstance().getEditors(path))
         if (editorMap == null) {
             initializeEditors()
         }
@@ -35,15 +43,33 @@ final class EditorManager {
             PathMatcher matcher = FileSystems.getDefault().getPathMatcher("glob:${regex}")
             Path filePath = new File(path).toPath()
             if (matcher.matches(filePath)) {
-                try {
-                    return editorMap.get(regex).newInstance()
-                } catch (e) {
-                    LogManager.getLogger(EditorManager.getClass()).trace(Utils.dump(e))
-                    return new CodeEditor()
-                }
+                editors.add(new DefaultEditorDescriptor(editorMap.get(regex)))
             }
         }
-        new CodeEditor()
+        print(editors.size())
+        if (editors.size() == 0) {
+            return new CodeEditor()
+        }
+        if (editors.size() == 1) {
+            try {
+                return editors.get(0).object.newInstance()
+            } catch(e) {
+                LogManager.getLogger(this.class).trace(Utils.dump(e))
+                return new CodeEditor()
+            }
+        }
+        EditorChooserDialog dialog = new EditorChooserDialog()
+        dialog.setItems(editors)
+        dialog.showDialog(null)
+        if (dialog.result == BaseDialog.RESULT_OK) {
+            try {
+                return editors.get(dialog.selectedIndex()).object.newInstance()
+            } catch(e) {
+                LogManager.getLogger(this.class).trace(Utils.dump(e))
+                return new CodeEditor()
+            }
+        }
+        return new CodeEditor()
     }
 
 }

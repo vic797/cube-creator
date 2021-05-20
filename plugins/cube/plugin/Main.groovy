@@ -9,6 +9,7 @@ class CubePlugin extends Plugin {
     @Override
     void load(PluginContext context) {
         context.registerEditor("**/tags/**/*.json", TagEditor.class)
+        context.registerEditor("**/pack.mcmeta", PackMetaEditor.class)
     }
 
 }

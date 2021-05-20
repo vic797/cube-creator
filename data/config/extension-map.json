@@ -7,5 +7,6 @@
     "mcmeta": "text/json",
     "groovy": "text/groovy",
     "md": "text/markdown",
-    "markdown": "text/markdown"
+    "markdown": "text/markdown",
+    "py": "text/python"
 }

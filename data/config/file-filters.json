@@ -45,5 +45,11 @@
             "jpg",
             "gif"
         ]
+    },
+    {
+        "text": "Python",
+        "extensions": [
+            "py"
+        ]
     }
 ]
